@@ -1,5 +1,16 @@
 var canvas = document.getElementById('canvas');
 
+// parent size + resizing
+var parent = canvas.parentNode;
+
+function fitContainer() {
+    canvas.width = parent.offsetWidth;
+    canvas.height = parent.offsetHeight;
+    view.setViewSize(canvas.width, canvas.height);
+}
+
+window.onresize = fitContainer;
+
 // install plugin
 Matter.use(
   'matter-attractors'
@@ -16,8 +27,8 @@ var Engine = Matter.Engine,
     Render = Matter.Render,
     Mouse = Matter.Mouse,
     Vertices = Matter.Vertices,
-    height = window.innerHeight,
-    width = window.innerWidth,
+    height = parent.offsetHeight,
+    width = parent.offsetWidth,
     mobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
     cursor = 'https://res.cloudinary.com/dfiwfoxwx/image/upload/v1561649817/CodePen/cursor-desktop.svg';
 
