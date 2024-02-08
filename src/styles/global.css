@@ -1,0 +1,19 @@
+:root {
+  
+  
+  --clr-body: #111;
+  --clr-canvas: #222;
+  --clr-content: #fff;
+  --br-panel: 1vw;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--clr-body);
+  font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+font-weight: normal;
+}
